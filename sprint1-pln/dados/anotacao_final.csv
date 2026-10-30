@@ -1,0 +1,8 @@
+id,texto_normalizado,intencao,entidades
+enu_0005,eu estou aqui para no acostamento e tenho um acidente no km 15 23 faixa 4,registrar_ocorrencia,faixa=acostamento@acostamento; tipo_ocorrencia=acidente@acidente; faixa=faixa_4@faixa 4
+enu_0008,tem um carro burado pneu aqui precisando de ajuda lá no ano de 1995 sentido capital,registrar_ocorrencia,tipo_ocorrencia=pane_mecanica@carro burado pneu; sentido=capital@sentido capital
+enu_0011,cheguei na acidente do quiloma de 125 tem 2 vítimas precisa de ambulância,solicitar_apoio,status=no_local@cheguei; tipo_ocorrencia=acidente@acidente; km=125@quiloma de 125; recurso=ambulancia@ambulância
+enu_0014,central desgato 07 aqui diamos o acidente sinistro tombamento no km 210 sentido capital existe mais um ambulância no local urgência,solicitar_apoio,tipo_ocorrencia=acidente@tombamento; km=210@km 210; sentido=capital@sentido capital; recurso=ambulancia@ambulância
+enu_0015,central qual o status da ocorrência do km 123 sentido capital o guinche já chegou lá,consultar_dados_ocorrencia,km=123@km 123; sentido=capital@sentido capital; recurso=guincho@guinche
+enu_0016,mandar a viatura de sinalização 2 porque o homem introduziu 210 sentido capital e me avisa quando chegar,solicitar_apoio,recurso=viatura_sinalizacao@viatura de sinalização; km=210@210; sentido=capital@sentido capital
+enu_0018,me faça um resumo de tudo que está aberto no meu turno,consultar_panorama,periodo=turno_atual@no meu turno

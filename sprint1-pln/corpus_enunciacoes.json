@@ -1,0 +1,1004 @@
+[
+  {
+    "id": "enu_0001",
+    "persona": "inspecao_trafego",
+    "transcricao_bruta": "Registro uma ocorrência no quilômetro de cento e quarenta e três e meio, o sinche do capital vem com o parado no acostamento.",
+    "texto_normalizado": "registro uma ocorrência no km 143.5 o sinche do capital vem com o parado no acostamento",
+    "intencao": "registrar_ocorrencia",
+    "entidades": [
+      {
+        "tipo": "km",
+        "valor": 143.5,
+        "span": [
+          27,
+          35
+        ]
+      },
+      {
+        "tipo": "sentido",
+        "valor": "capital",
+        "span": [
+          38,
+          55
+        ]
+      },
+      {
+        "tipo": "tipo_ocorrencia",
+        "valor": "veiculo_parado",
+        "span": [
+          66,
+          72
+        ]
+      },
+      {
+        "tipo": "faixa",
+        "valor": "acostamento",
+        "span": [
+          76,
+          87
+        ]
+      }
+    ],
+    "exige_confirmacao": true,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 1.0
+  },
+  {
+    "id": "enu_0002",
+    "persona": "inspecao_trafego",
+    "transcricao_bruta": "Registro uma ocorrência no quilômetro 225, animal morto, sentido oeste, faixa 3.",
+    "texto_normalizado": "registro uma ocorrência no km 225 animal morto sentido oeste faixa 3",
+    "intencao": "registrar_ocorrencia",
+    "entidades": [
+      {
+        "tipo": "km",
+        "valor": 225.0,
+        "span": [
+          27,
+          33
+        ]
+      },
+      {
+        "tipo": "tipo_ocorrencia",
+        "valor": "animal_na_pista",
+        "span": [
+          34,
+          46
+        ]
+      },
+      {
+        "tipo": "sentido",
+        "valor": "oeste",
+        "span": [
+          47,
+          60
+        ]
+      },
+      {
+        "tipo": "faixa",
+        "valor": "faixa_3",
+        "span": [
+          61,
+          68
+        ]
+      }
+    ],
+    "exige_confirmacao": true,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 1.0
+  },
+  {
+    "id": "enu_0003",
+    "persona": "inspecao_trafego",
+    "transcricao_bruta": "Registro uma ocorrência no quilômetro 200. Sentido capital, veículo parado no acostamento, faixa 2.",
+    "texto_normalizado": "registro uma ocorrência no km 200 sentido capital veículo parado no acostamento faixa 2",
+    "intencao": "registrar_ocorrencia",
+    "entidades": [
+      {
+        "tipo": "km",
+        "valor": 200.0,
+        "span": [
+          27,
+          33
+        ]
+      },
+      {
+        "tipo": "sentido",
+        "valor": "capital",
+        "span": [
+          34,
+          49
+        ]
+      },
+      {
+        "tipo": "tipo_ocorrencia",
+        "valor": "veiculo_parado",
+        "span": [
+          50,
+          64
+        ]
+      },
+      {
+        "tipo": "faixa",
+        "valor": "acostamento",
+        "span": [
+          68,
+          79
+        ]
+      },
+      {
+        "tipo": "faixa",
+        "valor": "faixa_2",
+        "span": [
+          80,
+          87
+        ]
+      }
+    ],
+    "exige_confirmacao": true,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 1.0
+  },
+  {
+    "id": "enu_0004",
+    "persona": "inspecao_trafego",
+    "transcricao_bruta": "Registram o acidente aqui na região central, faixa 2.",
+    "texto_normalizado": "registram o acidente aqui na região central faixa 2",
+    "intencao": "registrar_ocorrencia",
+    "entidades": [
+      {
+        "tipo": "tipo_ocorrencia",
+        "valor": "acidente",
+        "span": [
+          12,
+          20
+        ]
+      },
+      {
+        "tipo": "trecho",
+        "valor": "central",
+        "span": [
+          29,
+          43
+        ]
+      },
+      {
+        "tipo": "faixa",
+        "valor": "faixa_2",
+        "span": [
+          44,
+          51
+        ]
+      }
+    ],
+    "exige_confirmacao": true,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 1.0
+  },
+  {
+    "id": "enu_0005",
+    "persona": "inspecao_trafego",
+    "transcricao_bruta": "Eu estou aqui para no acostamento e tenho um acidente no quilômetro 15, 23, faixa 4.",
+    "texto_normalizado": "eu estou aqui para no acostamento e tenho um acidente no km 15 23 faixa 4",
+    "intencao": "registrar_ocorrencia",
+    "entidades": [
+      {
+        "tipo": "faixa",
+        "valor": "acostamento",
+        "span": [
+          22,
+          33
+        ]
+      },
+      {
+        "tipo": "tipo_ocorrencia",
+        "valor": "acidente",
+        "span": [
+          45,
+          53
+        ]
+      },
+      {
+        "tipo": "faixa",
+        "valor": "faixa_4",
+        "span": [
+          66,
+          73
+        ]
+      }
+    ],
+    "exige_confirmacao": true,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 0.0
+  },
+  {
+    "id": "enu_0006",
+    "persona": "inspecao_trafego",
+    "transcricao_bruta": "Carro do Acustamento, Km 227, Cinchido Capital.",
+    "texto_normalizado": "carro do acustamento km 227 cinchido capital",
+    "intencao": "registrar_ocorrencia",
+    "entidades": [
+      {
+        "tipo": "faixa",
+        "valor": "acostamento",
+        "span": [
+          9,
+          20
+        ]
+      },
+      {
+        "tipo": "km",
+        "valor": 227.0,
+        "span": [
+          21,
+          27
+        ]
+      },
+      {
+        "tipo": "sentido",
+        "valor": "capital",
+        "span": [
+          28,
+          44
+        ]
+      }
+    ],
+    "exige_confirmacao": true,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 1.0
+  },
+  {
+    "id": "enu_0007",
+    "persona": "inspecao_trafego",
+    "transcricao_bruta": "Que é a fe? Tem um tombamento aqui no km 125 e meio.",
+    "texto_normalizado": "que é a fe tem um tombamento aqui no km 125.5",
+    "intencao": "registrar_ocorrencia",
+    "entidades": [
+      {
+        "tipo": "tipo_ocorrencia",
+        "valor": "acidente",
+        "span": [
+          18,
+          28
+        ]
+      },
+      {
+        "tipo": "km",
+        "valor": 125.5,
+        "span": [
+          37,
+          45
+        ]
+      }
+    ],
+    "exige_confirmacao": true,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 1.0
+  },
+  {
+    "id": "enu_0008",
+    "persona": "inspecao_trafego",
+    "transcricao_bruta": "Tem um carro burado, pneu aqui, precisando de ajuda. Lá no ano de 1995, sentido capital.",
+    "texto_normalizado": "tem um carro burado pneu aqui precisando de ajuda lá no ano de 1995 sentido capital",
+    "intencao": "registrar_ocorrencia",
+    "entidades": [
+      {
+        "tipo": "tipo_ocorrencia",
+        "valor": "pane_mecanica",
+        "span": [
+          7,
+          24
+        ]
+      },
+      {
+        "tipo": "sentido",
+        "valor": "capital",
+        "span": [
+          68,
+          83
+        ]
+      }
+    ],
+    "exige_confirmacao": true,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 0.0
+  },
+  {
+    "id": "enu_0009",
+    "persona": "inspecao_trafego",
+    "transcricao_bruta": "Central, está de ambulância aqui no quilômetro 95, sentido interior.",
+    "texto_normalizado": "central está de ambulância aqui no km 95 sentido interior",
+    "intencao": "solicitar_apoio",
+    "entidades": [
+      {
+        "tipo": "recurso",
+        "valor": "ambulancia",
+        "span": [
+          16,
+          26
+        ]
+      },
+      {
+        "tipo": "km",
+        "valor": 95.0,
+        "span": [
+          35,
+          40
+        ]
+      },
+      {
+        "tipo": "sentido",
+        "valor": "interior",
+        "span": [
+          41,
+          57
+        ]
+      }
+    ],
+    "exige_confirmacao": true,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 1.0
+  },
+  {
+    "id": "enu_0010",
+    "persona": "inspecao_trafego",
+    "transcricao_bruta": "D.A.P. manda um guicho pesado, teve uma correncia com um caminhão.",
+    "texto_normalizado": "d a p mandar um guicho pesado teve uma correncia com um caminhão",
+    "intencao": "solicitar_apoio",
+    "entidades": [
+      {
+        "tipo": "recurso",
+        "valor": "guincho_pesado",
+        "span": [
+          16,
+          29
+        ]
+      }
+    ],
+    "exige_confirmacao": true,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 1.0
+  },
+  {
+    "id": "enu_0011",
+    "persona": "inspecao_trafego",
+    "transcricao_bruta": "Cheguei na acidente do quiloma de 125. Tem duas vítimas, precisa de ambulância.",
+    "texto_normalizado": "cheguei na acidente do quiloma de 125 tem 2 vítimas precisa de ambulância",
+    "intencao": "solicitar_apoio",
+    "entidades": [
+      {
+        "tipo": "status",
+        "valor": "no_local",
+        "span": [
+          0,
+          7
+        ]
+      },
+      {
+        "tipo": "tipo_ocorrencia",
+        "valor": "acidente",
+        "span": [
+          11,
+          19
+        ]
+      },
+      {
+        "tipo": "km",
+        "valor": 125.0,
+        "span": [
+          23,
+          37
+        ]
+      },
+      {
+        "tipo": "recurso",
+        "valor": "ambulancia",
+        "span": [
+          63,
+          73
+        ]
+      }
+    ],
+    "exige_confirmacao": true,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 0.0
+  },
+  {
+    "id": "enu_0012",
+    "persona": "inspecao_trafego",
+    "transcricao_bruta": "Central! É... Aqui é o espetão P1. Registro uma ocorrência no quilômetro 123, sentido capital. Um carro quebrado na faixa da direita. Ele está obstruindo a passagem.",
+    "texto_normalizado": "central aqui é o espetão p1 registro uma ocorrência no km 123 sentido capital um carro quebrado na faixa da direita ele está obstruindo a passagem",
+    "intencao": "registrar_ocorrencia",
+    "entidades": [
+      {
+        "tipo": "km",
+        "valor": 123.0,
+        "span": [
+          55,
+          61
+        ]
+      },
+      {
+        "tipo": "sentido",
+        "valor": "capital",
+        "span": [
+          62,
+          77
+        ]
+      },
+      {
+        "tipo": "tipo_ocorrencia",
+        "valor": "pane_mecanica",
+        "span": [
+          81,
+          95
+        ]
+      },
+      {
+        "tipo": "faixa",
+        "valor": "faixa_direita",
+        "span": [
+          99,
+          115
+        ]
+      }
+    ],
+    "exige_confirmacao": true,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 1.0
+  },
+  {
+    "id": "enu_0013",
+    "persona": "guincho",
+    "transcricao_bruta": "O central, guincho 2 na escuta. Cheguei agora no local, quilômetro 45,7, sentido interior. São 14,32 do momento.",
+    "texto_normalizado": "o central guincho 2 na escuta cheguei agora no local km 45.7 sentido interior são 14:32 do momento",
+    "intencao": "atualizar_status",
+    "entidades": [
+      {
+        "tipo": "status",
+        "valor": "no_local",
+        "span": [
+          30,
+          52
+        ]
+      },
+      {
+        "tipo": "km",
+        "valor": 45.7,
+        "span": [
+          53,
+          60
+        ]
+      },
+      {
+        "tipo": "sentido",
+        "valor": "interior",
+        "span": [
+          61,
+          77
+        ]
+      },
+      {
+        "tipo": "horario",
+        "valor": "14:32",
+        "span": [
+          82,
+          87
+        ]
+      }
+    ],
+    "exige_confirmacao": true,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 1.0
+  },
+  {
+    "id": "enu_0014",
+    "persona": "aph",
+    "transcricao_bruta": "Central, desgato 07 aqui. Diamos o acidente sinistro, tombamento no quilômetro 210. Sentido capital. Existe mais um ambulância no local urgência.",
+    "texto_normalizado": "central desgato 07 aqui diamos o acidente sinistro tombamento no km 210 sentido capital existe mais um ambulância no local urgência",
+    "intencao": "solicitar_apoio",
+    "entidades": [
+      {
+        "tipo": "tipo_ocorrencia",
+        "valor": "acidente",
+        "span": [
+          51,
+          61
+        ]
+      },
+      {
+        "tipo": "km",
+        "valor": 210.0,
+        "span": [
+          65,
+          71
+        ]
+      },
+      {
+        "tipo": "sentido",
+        "valor": "capital",
+        "span": [
+          72,
+          87
+        ]
+      },
+      {
+        "tipo": "recurso",
+        "valor": "ambulancia",
+        "span": [
+          103,
+          113
+        ]
+      }
+    ],
+    "exige_confirmacao": true,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 0.0
+  },
+  {
+    "id": "enu_0015",
+    "persona": "supervisor",
+    "transcricao_bruta": "Central, qual o status da ocorrência do quilômetro 123 sentido capital? O guinche já chegou lá?",
+    "texto_normalizado": "central qual o status da ocorrência do km 123 sentido capital o guinche já chegou lá",
+    "intencao": "consultar_dados_ocorrencia",
+    "entidades": [
+      {
+        "tipo": "km",
+        "valor": 123.0,
+        "span": [
+          39,
+          45
+        ]
+      },
+      {
+        "tipo": "sentido",
+        "valor": "capital",
+        "span": [
+          46,
+          61
+        ]
+      },
+      {
+        "tipo": "recurso",
+        "valor": "guincho",
+        "span": [
+          64,
+          71
+        ]
+      }
+    ],
+    "exige_confirmacao": false,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 0.0
+  },
+  {
+    "id": "enu_0016",
+    "persona": "supervisor",
+    "transcricao_bruta": "Manda a viatura de sinalização 2, porque o homem introduziu 210, sentido capital, e me avisa quando chegar.",
+    "texto_normalizado": "mandar a viatura de sinalização 2 porque o homem introduziu 210 sentido capital e me avisa quando chegar",
+    "intencao": "solicitar_apoio",
+    "entidades": [
+      {
+        "tipo": "recurso",
+        "valor": "viatura_sinalizacao",
+        "span": [
+          9,
+          31
+        ]
+      },
+      {
+        "tipo": "km",
+        "valor": 210.0,
+        "span": [
+          60,
+          63
+        ]
+      },
+      {
+        "tipo": "sentido",
+        "valor": "capital",
+        "span": [
+          64,
+          79
+        ]
+      }
+    ],
+    "exige_confirmacao": true,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 0.0
+  },
+  {
+    "id": "enu_0017",
+    "persona": "supervisor",
+    "transcricao_bruta": "Quais equipes estão livre agora no Trecho Norte?",
+    "texto_normalizado": "quais equipes estão livre agora no trecho norte",
+    "intencao": "consultar_recursos",
+    "entidades": [
+      {
+        "tipo": "trecho",
+        "valor": "norte",
+        "span": [
+          35,
+          47
+        ]
+      }
+    ],
+    "exige_confirmacao": false,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 1.0
+  },
+  {
+    "id": "enu_0018",
+    "persona": "supervisor",
+    "transcricao_bruta": "Me faça um resumo de tudo que está aberto no meu turno.",
+    "texto_normalizado": "me faça um resumo de tudo que está aberto no meu turno",
+    "intencao": "consultar_panorama",
+    "entidades": [
+      {
+        "tipo": "periodo",
+        "valor": "turno_atual",
+        "span": [
+          42,
+          54
+        ]
+      }
+    ],
+    "exige_confirmacao": false,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 0.0
+  },
+  {
+    "id": "enu_0019",
+    "persona": "supervisor",
+    "transcricao_bruta": "E aquela do Caminhão Tombado? Já resolveram?",
+    "texto_normalizado": "e aquela do caminhão tombado já resolveram",
+    "intencao": "consultar_dados_ocorrencia",
+    "entidades": [
+      {
+        "tipo": "tipo_ocorrencia",
+        "valor": "acidente",
+        "span": [
+          12,
+          28
+        ]
+      }
+    ],
+    "exige_confirmacao": false,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 1.0
+  },
+  {
+    "id": "enu_0020",
+    "persona": "gerente",
+    "transcricao_bruta": "E quantas ocorrências a gente teve a semana lá no Trecho Sul?",
+    "texto_normalizado": "e quantas ocorrências a gente teve a semana lá no trecho sul",
+    "intencao": "consultar_indicadores",
+    "entidades": [
+      {
+        "tipo": "periodo",
+        "valor": "semana_atual",
+        "span": [
+          35,
+          43
+        ]
+      },
+      {
+        "tipo": "trecho",
+        "valor": "sul",
+        "span": [
+          50,
+          60
+        ]
+      }
+    ],
+    "exige_confirmacao": false,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 1.0
+  },
+  {
+    "id": "enu_0021",
+    "persona": "gerente",
+    "transcricao_bruta": "Qual foi o tempo médio mesmo de atendimento lá do gui? Acho que é um tubro.",
+    "texto_normalizado": "qual foi o tempo médio mesmo de atendimento lá do gui acho que é um tubro",
+    "intencao": "consultar_indicadores",
+    "entidades": [
+      {
+        "tipo": "recurso",
+        "valor": "guincho",
+        "span": [
+          50,
+          53
+        ]
+      }
+    ],
+    "exige_confirmacao": false,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 1.0
+  },
+  {
+    "id": "enu_0022",
+    "persona": "gerente",
+    "transcricao_bruta": "E já era um relatório dos acidentes com vítima deste mês para reunião de amanhã.",
+    "texto_normalizado": "e já era um relatório dos acidentes com vítima deste mês para reunião de amanhã",
+    "intencao": "gerar_resumo",
+    "entidades": [
+      {
+        "tipo": "tipo_ocorrencia",
+        "valor": "acidente",
+        "span": [
+          26,
+          35
+        ]
+      },
+      {
+        "tipo": "periodo",
+        "valor": "mes_atual",
+        "span": [
+          47,
+          56
+        ]
+      }
+    ],
+    "exige_confirmacao": true,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 1.0
+  },
+  {
+    "id": "enu_0023",
+    "persona": "gerente",
+    "transcricao_bruta": "Qual trecho teve mais animal na pista nos últimos 30 dias?",
+    "texto_normalizado": "qual trecho teve mais animal na pista nos últimos 30 dias",
+    "intencao": "consultar_indicadores",
+    "entidades": [
+      {
+        "tipo": "tipo_ocorrencia",
+        "valor": "animal_na_pista",
+        "span": [
+          22,
+          37
+        ]
+      },
+      {
+        "tipo": "periodo",
+        "valor": "ultimos_30_dias",
+        "span": [
+          38,
+          57
+        ]
+      }
+    ],
+    "exige_confirmacao": false,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 1.0
+  },
+  {
+    "id": "enu_0024",
+    "persona": "gerente",
+    "transcricao_bruta": "E aí, como é que está a operação hoje?",
+    "texto_normalizado": "e como é que está a operação hoje",
+    "intencao": "consultar_panorama",
+    "entidades": [
+      {
+        "tipo": "periodo",
+        "valor": "hoje",
+        "span": [
+          29,
+          33
+        ]
+      }
+    ],
+    "exige_confirmacao": false,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 1.0
+  },
+  {
+    "id": "enu_0025",
+    "persona": "aph",
+    "transcricao_bruta": "Central, resgate 3, chegando no quilômetro 95, cincha do interior. Previsão, acho que de 2 minutos.",
+    "texto_normalizado": "central resgate 3 chegando no km 95 cincha do interior previsão acho que de 2 minutos",
+    "intencao": "atualizar_status",
+    "entidades": [
+      {
+        "tipo": "status",
+        "valor": "a_caminho",
+        "span": [
+          18,
+          26
+        ]
+      },
+      {
+        "tipo": "km",
+        "valor": 95.0,
+        "span": [
+          30,
+          35
+        ]
+      },
+      {
+        "tipo": "sentido",
+        "valor": "interior",
+        "span": [
+          36,
+          54
+        ]
+      }
+    ],
+    "exige_confirmacao": true,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 1.0
+  },
+  {
+    "id": "enu_0026",
+    "persona": "aph",
+    "transcricao_bruta": "A vítima está consciente, pressão 12 por 8 e vamos emraver para o hospital regional.",
+    "texto_normalizado": "a vítima está consciente pressão 12 por 8 e vamos emraver para o hospital regional",
+    "intencao": "registrar_dados_atendimento",
+    "entidades": [],
+    "exige_confirmacao": true,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 1.0
+  },
+  {
+    "id": "enu_0027",
+    "persona": "aph",
+    "transcricao_bruta": "Eu preciso do helicóptero num quilômetro 210. Tem vítima presa nas ferragens.",
+    "texto_normalizado": "eu preciso do helicóptero num km 210 tem vítima presa nas ferragens",
+    "intencao": "solicitar_apoio",
+    "entidades": [
+      {
+        "tipo": "km",
+        "valor": 210.0,
+        "span": [
+          30,
+          36
+        ]
+      },
+      {
+        "tipo": "tipo_ocorrencia",
+        "valor": "vitima_presa",
+        "span": [
+          41,
+          67
+        ]
+      }
+    ],
+    "exige_confirmacao": true,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 1.0
+  },
+  {
+    "id": "enu_0028",
+    "persona": "aph",
+    "transcricao_bruta": "Atendimento encerrado no quilômetro 125. Duas vítimas encaminhadas e equipe liberada.",
+    "texto_normalizado": "atendimento encerrado no km 125 2 vítimas encaminhadas e equipe liberada",
+    "intencao": "encerrar_atendimento",
+    "entidades": [
+      {
+        "tipo": "status",
+        "valor": "encerrada",
+        "span": [
+          0,
+          21
+        ]
+      },
+      {
+        "tipo": "km",
+        "valor": 125.0,
+        "span": [
+          25,
+          31
+        ]
+      }
+    ],
+    "exige_confirmacao": true,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 1.0
+  },
+  {
+    "id": "enu_0029",
+    "persona": "aph",
+    "transcricao_bruta": "E manda mais uma equipe pra cá, por favor.",
+    "texto_normalizado": "e mandar mais uma equipe para cá por favor",
+    "intencao": "solicitar_apoio",
+    "entidades": [
+      {
+        "tipo": "recurso",
+        "valor": "equipe_aph",
+        "span": [
+          18,
+          24
+        ]
+      }
+    ],
+    "exige_confirmacao": true,
+    "anotadores": [
+      "a1",
+      "a2"
+    ],
+    "concordancia": 1.0
+  }
+]

@@ -1,0 +1,30 @@
+id,texto_normalizado,intencao,entidades
+enu_0001,registro uma ocorrência no km 143.5 o sinche do capital vem com o parado no acostamento,registrar_ocorrencia,km=143.5@km 143.5; faixa=acostamento@acostamento
+enu_0002,registro uma ocorrência no km 225 animal morto sentido oeste faixa 3,registrar_ocorrencia,km=225@km 225; tipo_ocorrencia=animal_na_pista@animal morto; sentido=oeste@sentido oeste; faixa=faixa_3@faixa 3
+enu_0003,registro uma ocorrência no km 200 sentido capital veículo parado no acostamento faixa 2,registrar_ocorrencia,km=200@km 200; sentido=capital@sentido capital; tipo_ocorrencia=veiculo_parado@veículo parado; faixa=acostamento@acostamento; faixa=faixa_2@faixa 2
+enu_0004,registram o acidente aqui na região central faixa 2,registrar_ocorrencia,trecho=central@região central; tipo_ocorrencia=acidente@acidente; faixa=faixa_2@faixa 2
+enu_0005,eu estou aqui para no acostamento e tenho um acidente no km 15 23 faixa 4,relatar_condicoes,faixa=acostamento@acostamento; tipo_ocorrencia=acidente@acidente; faixa=faixa_4@faixa 4
+enu_0006,carro do acustamento km 227 cinchido capital,registrar_ocorrencia,km=227@km 227; sentido=capital@cinchido capital
+enu_0007,que é a fe tem um tombamento aqui no km 125.5,registrar_ocorrencia,tipo_ocorrencia=acidente@tombamento; km=125.5@km 125.5
+enu_0008,tem um carro burado pneu aqui precisando de ajuda lá no ano de 1995 sentido capital,solicitar_apoio,sentido=capital@sentido capital
+enu_0009,central está de ambulância aqui no km 95 sentido interior,solicitar_apoio,recurso=ambulancia@ambulância; km=95@km 95; sentido=interior@sentido interior
+enu_0010,d a p mandar um guicho pesado teve uma correncia com um caminhão,solicitar_apoio,recurso=guincho_pesado@guicho pesado
+enu_0011,cheguei na acidente do quiloma de 125 tem 2 vítimas precisa de ambulância,solicitar_apoio,km=125@quiloma de 125; recurso=ambulancia@ambulância
+enu_0012,central aqui é o espetão p1 registro uma ocorrência no km 123 sentido capital um carro quebrado na faixa da direita ele está obstruindo a passagem,registrar_ocorrencia,km=123@km 123; sentido=capital@sentido capital; tipo_ocorrencia=pane_mecanica@carro quebrado; faixa=faixa_direita@faixa da direita; condicao_observada=faixa_interditada@obstruindo a passagem
+enu_0013,o central guincho 2 na escuta cheguei agora no local km 45.7 sentido interior são 14:32 do momento,atualizar_status,status=no_local@cheguei agora no local; km=45.7@km 45.7; sentido=interior@sentido interior; horario=14:32@14:32
+enu_0014,central desgato 07 aqui diamos o acidente sinistro tombamento no km 210 sentido capital existe mais um ambulância no local urgência,relatar_condicoes,tipo_ocorrencia=acidente@tombamento; km=210@km 210; sentido=capital@sentido capital; recurso=ambulancia@ambulância
+enu_0015,central qual o status da ocorrência do km 123 sentido capital o guinche já chegou lá,consultar_recursos,km=123@km 123; sentido=capital@sentido capital; recurso=guincho@guinche
+enu_0016,mandar a viatura de sinalização 2 porque o homem introduziu 210 sentido capital e me avisa quando chegar,solicitar_apoio,recurso=viatura_sinalizacao@viatura de sinalização; sentido=capital@sentido capital
+enu_0017,quais equipes estão livre agora no trecho norte,consultar_recursos,trecho=norte@trecho norte
+enu_0018,me faça um resumo de tudo que está aberto no meu turno,gerar_resumo,periodo=turno_atual@no meu turno
+enu_0019,e aquela do caminhão tombado já resolveram,consultar_dados_ocorrencia,
+enu_0020,e quantas ocorrências a gente teve a semana lá no trecho sul,consultar_indicadores,trecho=sul@trecho sul
+enu_0021,qual foi o tempo médio mesmo de atendimento lá do gui acho que é um tubro,consultar_indicadores,
+enu_0022,e já era um relatório dos acidentes com vítima deste mês para reunião de amanhã,gerar_resumo,tipo_ocorrencia=acidente@acidentes; periodo=mes_atual@deste mês
+enu_0023,qual trecho teve mais animal na pista nos últimos 30 dias,consultar_indicadores,tipo_ocorrencia=animal_na_pista@animal na pista; periodo=ultimos_30_dias@nos últimos 30 dias
+enu_0024,e como é que está a operação hoje,consultar_panorama,periodo=hoje@hoje
+enu_0025,central resgate 3 chegando no km 95 cincha do interior previsão acho que de 2 minutos,atualizar_status,status=a_caminho@chegando; km=95@km 95; sentido=interior@cincha do interior
+enu_0026,a vítima está consciente pressão 12 por 8 e vamos emraver para o hospital regional,registrar_dados_atendimento,status=em_transporte@vamos emraver para o hospital regional
+enu_0027,eu preciso do helicóptero num km 210 tem vítima presa nas ferragens,solicitar_apoio,km=210@km 210; tipo_ocorrencia=vitima_presa@vítima presa nas ferragens
+enu_0028,atendimento encerrado no km 125 2 vítimas encaminhadas e equipe liberada,encerrar_atendimento,status=encerrada@atendimento encerrado; km=125@km 125
+enu_0029,e mandar mais uma equipe para cá por favor,solicitar_apoio,

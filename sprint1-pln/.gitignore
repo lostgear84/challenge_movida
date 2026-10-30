@@ -1,0 +1,11 @@
+# áudios ficam no Drive, nunca no repositório (voz é dado pessoal)
+audios/
+*.m4a
+*.mp3
+*.wav
+*.ogg
+*.opus
+__pycache__/
+.ipynb_checkpoints/
+*.mp4
+*.aac

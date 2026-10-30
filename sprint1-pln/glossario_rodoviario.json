@@ -1,0 +1,579 @@
+{
+  "versao": "0.1-rascunho",
+  "observacao": "Variantes e correções de ASR são HIPÓTESES iniciais. Devem ser revistas com as transcrições reais do Whisper (campo 'origem' indica de onde veio cada item).",
+  "termos": [
+    {
+      "canonico": "km",
+      "tipo": "unidade",
+      "variantes": [
+        "km",
+        "quilômetro",
+        "quilometro",
+        "quilômetros",
+        "kilômetro",
+        "kilometro",
+        "k m"
+      ],
+      "origem": "enunciado"
+    },
+    {
+      "canonico": "acostamento",
+      "tipo": "faixa",
+      "variantes": [
+        "acostamento",
+        "no acostamento"
+      ],
+      "origem": "enunciado"
+    },
+    {
+      "canonico": "faixa_direita",
+      "tipo": "faixa",
+      "variantes": [
+        "faixa da direita",
+        "faixa direita"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "faixa_esquerda",
+      "tipo": "faixa",
+      "variantes": [
+        "faixa da esquerda",
+        "faixa esquerda"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "canteiro_central",
+      "tipo": "faixa",
+      "variantes": [
+        "canteiro central",
+        "canteiro"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "capital",
+      "tipo": "sentido",
+      "variantes": [
+        "sentido capital",
+        "pista capital"
+      ],
+      "origem": "enunciado"
+    },
+    {
+      "canonico": "interior",
+      "tipo": "sentido",
+      "variantes": [
+        "sentido interior",
+        "pista interior"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "litoral",
+      "tipo": "sentido",
+      "variantes": [
+        "sentido litoral",
+        "pista litoral"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "crescente",
+      "tipo": "sentido",
+      "variantes": [
+        "sentido crescente",
+        "pista crescente"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "decrescente",
+      "tipo": "sentido",
+      "variantes": [
+        "sentido decrescente",
+        "pista decrescente"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "norte",
+      "tipo": "sentido",
+      "variantes": [
+        "sentido norte",
+        "pista norte"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "sul",
+      "tipo": "sentido",
+      "variantes": [
+        "sentido sul",
+        "pista sul"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "acidente",
+      "tipo": "tipo_ocorrencia",
+      "variantes": [
+        "acidente",
+        "sinistro",
+        "batida",
+        "colisão",
+        "engavetamento",
+        "capotamento"
+      ],
+      "origem": "enunciado (sinistro vs. acidente)"
+    },
+    {
+      "canonico": "atropelamento",
+      "tipo": "tipo_ocorrencia",
+      "variantes": [
+        "atropelamento",
+        "atropelado",
+        "atropelada"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "pane_mecanica",
+      "tipo": "tipo_ocorrencia",
+      "variantes": [
+        "pane mecânica",
+        "pane",
+        "quebrado",
+        "quebrou"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "veiculo_parado",
+      "tipo": "tipo_ocorrencia",
+      "variantes": [
+        "veículo parado",
+        "carro parado",
+        "caminhão parado"
+      ],
+      "origem": "apresentação Motiva (slide Comando de Voz)"
+    },
+    {
+      "canonico": "animal_na_pista",
+      "tipo": "tipo_ocorrencia",
+      "variantes": [
+        "animal na pista",
+        "cavalo na pista",
+        "boi na pista",
+        "cachorro na pista"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "objeto_na_pista",
+      "tipo": "tipo_ocorrencia",
+      "variantes": [
+        "objeto na pista",
+        "pneu na pista",
+        "galho na pista"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "oleo_na_pista",
+      "tipo": "tipo_ocorrencia",
+      "variantes": [
+        "óleo na pista",
+        "oleo na pista"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "queda_de_carga",
+      "tipo": "tipo_ocorrencia",
+      "variantes": [
+        "queda de carga",
+        "carga caída"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "incendio_veiculo",
+      "tipo": "tipo_ocorrencia",
+      "variantes": [
+        "pegando fogo",
+        "incêndio",
+        "veículo em chamas"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "vitima_presa",
+      "tipo": "tipo_ocorrencia",
+      "variantes": [
+        "presa nas ferragens",
+        "preso nas ferragens",
+        "presa às ferragens"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "guincho_pesado",
+      "tipo": "recurso",
+      "variantes": [
+        "guincho pesado",
+        "guincho de caminhão"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "guincho_leve",
+      "tipo": "recurso",
+      "variantes": [
+        "guincho leve"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "guincho",
+      "tipo": "recurso",
+      "variantes": [
+        "guincho",
+        "reboque"
+      ],
+      "origem": "apresentação Motiva"
+    },
+    {
+      "canonico": "uti_movel",
+      "tipo": "recurso",
+      "variantes": [
+        "uti móvel",
+        "uti movel"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "ambulancia",
+      "tipo": "recurso",
+      "variantes": [
+        "ambulância",
+        "ambulancia",
+        "resgate"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "viatura_sinalizacao",
+      "tipo": "recurso",
+      "variantes": [
+        "viatura de sinalização",
+        "sinalização"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "viatura_inspecao",
+      "tipo": "recurso",
+      "variantes": [
+        "viatura de inspeção",
+        "viatura"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "policia",
+      "tipo": "recurso",
+      "variantes": [
+        "polícia",
+        "polícia rodoviária",
+        "prf"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "bombeiros",
+      "tipo": "recurso",
+      "variantes": [
+        "bombeiro",
+        "bombeiros"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "missao_recebida",
+      "tipo": "status",
+      "variantes": [
+        "missão recebida",
+        "recebido",
+        "recebi a missão"
+      ],
+      "origem": "user story P2-US2"
+    },
+    {
+      "canonico": "a_caminho",
+      "tipo": "status",
+      "variantes": [
+        "a caminho",
+        "saindo agora",
+        "tô saindo",
+        "chegando",
+        "deslocando"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "no_local",
+      "tipo": "status",
+      "variantes": [
+        "cheguei",
+        "no local",
+        "chegada da equipe",
+        "chegamos"
+      ],
+      "origem": "user story P2-US4"
+    },
+    {
+      "canonico": "em_atendimento",
+      "tipo": "status",
+      "variantes": [
+        "em atendimento"
+      ],
+      "origem": "apresentação Motiva"
+    },
+    {
+      "canonico": "remocao_iniciada",
+      "tipo": "status",
+      "variantes": [
+        "iniciando reboque",
+        "iniciando remoção",
+        "início do reboque"
+      ],
+      "origem": "apresentação Motiva"
+    },
+    {
+      "canonico": "em_transporte",
+      "tipo": "status",
+      "variantes": [
+        "a caminho do hospital",
+        "removida",
+        "removido pro hospital"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "via_liberada",
+      "tipo": "status",
+      "variantes": [
+        "pista liberada",
+        "via liberada",
+        "liberação da via"
+      ],
+      "origem": "user story P2-US7"
+    },
+    {
+      "canonico": "neblina",
+      "tipo": "condicao_observada",
+      "variantes": [
+        "neblina",
+        "cerração"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "chuva",
+      "tipo": "condicao_observada",
+      "variantes": [
+        "chuva",
+        "chovendo"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "pista_molhada",
+      "tipo": "condicao_observada",
+      "variantes": [
+        "pista molhada"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "baixa_visibilidade",
+      "tipo": "condicao_observada",
+      "variantes": [
+        "baixa visibilidade",
+        "visibilidade ruim"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "faixa_interditada",
+      "tipo": "condicao_observada",
+      "variantes": [
+        "faixa bloqueada",
+        "faixa interditada"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "pista_bloqueada",
+      "tipo": "condicao_observada",
+      "variantes": [
+        "pista bloqueada",
+        "pista interditada",
+        "pista fechada"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "vazamento_combustivel",
+      "tipo": "condicao_observada",
+      "variantes": [
+        "vazando combustível",
+        "vazamento de combustível"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "carga_espalhada",
+      "tipo": "condicao_observada",
+      "variantes": [
+        "carga espalhada"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "fumaca",
+      "tipo": "condicao_observada",
+      "variantes": [
+        "fumaça"
+      ],
+      "origem": "proposta"
+    },
+    {
+      "canonico": "congestionamento",
+      "tipo": "condicao_observada",
+      "variantes": [
+        "congestionamento",
+        "trânsito parado",
+        "fila"
+      ],
+      "origem": "proposta"
+    }
+  ],
+  "verbos_comando": {
+    "registra": "registrar",
+    "registre": "registrar",
+    "abre": "abrir",
+    "abra": "abrir",
+    "atualiza": "atualizar",
+    "atualize": "atualizar",
+    "muda": "mudar",
+    "mude": "mudar",
+    "solicita": "solicitar",
+    "solicito": "solicitar",
+    "manda": "mandar",
+    "mande": "mandar",
+    "marca": "marcar",
+    "marque": "marcar",
+    "encerra": "encerrar",
+    "encerre": "encerrar",
+    "finaliza": "finalizar",
+    "finalize": "finalizar",
+    "gera": "gerar",
+    "gere": "gerar",
+    "valida": "validar",
+    "valide": "validar",
+    "cancela": "cancelar",
+    "cancele": "cancelar",
+    "informa": "informar",
+    "informe": "informar",
+    "compara": "comparar",
+    "mostra": "mostrar",
+    "confirmo": "confirmar",
+    "confirma": "confirmar"
+  },
+  "correcoes_asr": [
+    {
+      "errado": "ocorrencia",
+      "certo": "ocorrência"
+    },
+    {
+      "errado": "ocorrencias",
+      "certo": "ocorrências"
+    },
+    {
+      "errado": "veiculo",
+      "certo": "veículo"
+    },
+    {
+      "errado": "vitima",
+      "certo": "vítima"
+    },
+    {
+      "errado": "transito",
+      "certo": "trânsito"
+    },
+    {
+      "errado": "sinalizacao",
+      "certo": "sinalização"
+    },
+    {
+      "errado": "missao",
+      "certo": "missão"
+    },
+    {
+      "errado": "a costamento",
+      "certo": "acostamento"
+    },
+    {
+      "errado": "sentido capitão",
+      "certo": "sentido capital"
+    },
+    {
+      "errado": "guinxo",
+      "certo": "guincho"
+    },
+    {
+      "errado": "u t i",
+      "certo": "uti"
+    },
+    {
+      "errado": "pra",
+      "certo": "para"
+    },
+    {
+      "errado": "pro",
+      "certo": "para o"
+    }
+  ],
+  "hesitacoes": [
+    "hã",
+    "hãã",
+    "ãh",
+    "hum",
+    "humm",
+    "hmm",
+    "ahn",
+    "éé",
+    "ééé",
+    "eh",
+    "uhm"
+  ],
+  "marcadores_discurso_removidos": [
+    "aí",
+    "ó",
+    "né"
+  ],
+  "a_confirmar": [
+    {
+      "termo": "P1 (e P2, P3...)",
+      "nota": "O enunciado cita 'P1' como abreviação, mas os documentos não dizem o significado operacional (prioridade? código de ocorrência?). Confirmar com o professor/Motiva antes de entrar no glossário.",
+      "decisao": "Interpretação adotada em 27/10/2026: P1 é a Persona 1 (Agente de Inspeção de Tráfego), mesma numeração das user stories (P1-US1 a P5-US8). O áudio enu_0012 ('aqui é o inspetor P1') é coerente com isso."
+    },
+    {
+      "termo": "códigos de ocorrência do KCOR",
+      "nota": "Se a Motiva usar códigos padronizados, eles devem substituir o enum tipo_ocorrencia."
+    }
+  ]
+}

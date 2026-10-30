@@ -1,0 +1,7 @@
+# no Colab, transformers e torch já vêm instalados
+jsonschema>=4
+pandas
+scikit-learn
+transformers
+torch
+matplotlib

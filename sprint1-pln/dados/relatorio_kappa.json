@@ -1,0 +1,104 @@
+{
+  "kappa_geral": 0.717,
+  "limiar": 0.7,
+  "passa_geral": true,
+  "intencoes_abaixo_do_limiar": {
+    "consultar_dados_ocorrencia": {
+      "kappa": 0.651,
+      "n_a1": 2,
+      "n_a2": 1
+    },
+    "consultar_panorama": {
+      "kappa": 0.651,
+      "n_a1": 2,
+      "n_a2": 1
+    },
+    "consultar_recursos": {
+      "kappa": 0.651,
+      "n_a1": 1,
+      "n_a2": 2
+    },
+    "gerar_resumo": {
+      "kappa": 0.651,
+      "n_a1": 1,
+      "n_a2": 2
+    },
+    "registrar_direcionamento": {
+      "kappa": 0.0,
+      "n_a1": 1,
+      "n_a2": 0
+    },
+    "relatar_condicoes": {
+      "kappa": 0.0,
+      "n_a1": 0,
+      "n_a2": 2
+    },
+    "solicitar_apoio": {
+      "kappa": 0.583,
+      "n_a1": 5,
+      "n_a2": 7
+    }
+  },
+  "por_intencao": {
+    "atualizar_status": {
+      "kappa": 0.782,
+      "n_a1": 3,
+      "n_a2": 2
+    },
+    "consultar_dados_ocorrencia": {
+      "kappa": 0.651,
+      "n_a1": 2,
+      "n_a2": 1
+    },
+    "consultar_indicadores": {
+      "kappa": 1.0,
+      "n_a1": 3,
+      "n_a2": 3
+    },
+    "consultar_panorama": {
+      "kappa": 0.651,
+      "n_a1": 2,
+      "n_a2": 1
+    },
+    "consultar_recursos": {
+      "kappa": 0.651,
+      "n_a1": 1,
+      "n_a2": 2
+    },
+    "encerrar_atendimento": {
+      "kappa": 1.0,
+      "n_a1": 1,
+      "n_a2": 1
+    },
+    "gerar_resumo": {
+      "kappa": 0.651,
+      "n_a1": 1,
+      "n_a2": 2
+    },
+    "registrar_dados_atendimento": {
+      "kappa": 1.0,
+      "n_a1": 1,
+      "n_a2": 1
+    },
+    "registrar_direcionamento": {
+      "kappa": 0.0,
+      "n_a1": 1,
+      "n_a2": 0
+    },
+    "registrar_ocorrencia": {
+      "kappa": 0.828,
+      "n_a1": 9,
+      "n_a2": 7
+    },
+    "relatar_condicoes": {
+      "kappa": 0.0,
+      "n_a1": 0,
+      "n_a2": 2
+    },
+    "solicitar_apoio": {
+      "kappa": 0.583,
+      "n_a1": 5,
+      "n_a2": 7
+    }
+  }
+}

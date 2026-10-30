@@ -1,0 +1,714 @@
+{
+  "versao": "0.2.1",
+  "data": "2026-10-25",
+  "status": "Aprovada pela aluna em 27/10/2026 (fusões da D1 aceitas como propostas)",
+  "fonte": "Challenge Motiva — User Stories v1.0 (set/2026) + Apresentação Motiva 14/09/2026",
+  "personas": {
+    "inspecao_trafego": "Agente de Inspeção de Tráfego",
+    "guincho": "Agente de Guincho ou Recurso Operacional",
+    "aph": "Agente de Atendimento Pré-Hospitalar (APH)",
+    "supervisor": "Supervisor de Operações",
+    "gerente": "Coordenador ou Gerente de Operações"
+  },
+  "escala_criticidade": {
+    "alta": "cria, aciona, encerra ou valida algo com efeito operacional ou dado sensível",
+    "media": "altera um registro existente ou gera documento para envio",
+    "baixa": "só consulta, sem efeito no sistema"
+  },
+  "intencoes": [
+    {
+      "nome": "registrar_ocorrencia",
+      "descricao": "Abrir uma ocorrência nova a partir do que o profissional observou na via.",
+      "personas_autorizadas": [
+        "inspecao_trafego"
+      ],
+      "criticidade": "alta",
+      "exige_confirmacao": true,
+      "dado_sensivel": false,
+      "user_stories": [
+        "P1-US1"
+      ],
+      "regra_de_desambiguacao": "Se a frase descreve um evento NOVO (acidente, pane, animal na pista) sem citar ocorrência já existente, é registrar_ocorrencia. Se complementa uma ocorrência já aberta, é relatar_condicoes.",
+      "exemplos": [
+        "registra uma ocorrência no km 123.5 sentido capital",
+        "abre ocorrência, animal na pista no km 204"
+      ],
+      "tipo": "dominio"
+    },
+    {
+      "nome": "relatar_condicoes",
+      "descricao": "Complementar uma ocorrência com localização, sentido, faixa e condições da via, do veículo, da carga ou do local.",
+      "personas_autorizadas": [
+        "inspecao_trafego",
+        "guincho"
+      ],
+      "criticidade": "media",
+      "exige_confirmacao": true,
+      "dado_sensivel": false,
+      "user_stories": [
+        "P1-US3",
+        "P2-US5"
+      ],
+      "regra_de_desambiguacao": "Descreve como está o local/veículo/carga de uma ocorrência já em andamento. Dados de saúde de vítima vão para registrar_dados_atendimento.",
+      "exemplos": [
+        "pista sentido interior com neblina entre o km 30 e o km 35",
+        "carga espalhada na faixa 2, vazando combustível"
+      ],
+      "tipo": "dominio"
+    },
+    {
+      "nome": "registrar_dados_atendimento",
+      "descricao": "Registrar informações operacionais e assistenciais do atendimento pré-hospitalar.",
+      "personas_autorizadas": [
+        "aph"
+      ],
+      "criticidade": "alta",
+      "exige_confirmacao": true,
+      "dado_sensivel": true,
+      "user_stories": [
+        "P3-US2"
+      ],
+      "regra_de_desambiguacao": "Qualquer dado clínico ou da vítima (estado, sinais vitais, lesões). Contém dado pessoal sensível (LGPD): acesso restrito ao APH.",
+      "exemplos": [
+        "registra vítima consciente, pressão 12 por 8"
+      ],
+      "tipo": "dominio"
+    },
+    {
+      "nome": "consultar_procedimento",
+      "descricao": "Consultar o procedimento operacional ou o protocolo institucional aprovado para um tipo de ocorrência.",
+      "personas_autorizadas": [
+        "inspecao_trafego",
+        "guincho",
+        "aph"
+      ],
+      "criticidade": "baixa",
+      "exige_confirmacao": false,
+      "dado_sensivel": false,
+      "user_stories": [
+        "P1-US2",
+        "P3-US1"
+      ],
+      "regra_de_desambiguacao": "Palavras-chave: procedimento, protocolo, 'o que eu faço'. A resposta vem só de base aprovada; não substitui julgamento clínico.",
+      "exemplos": [
+        "qual o procedimento pra veículo pegando fogo",
+        "qual o protocolo pra vítima presa nas ferragens"
+      ],
+      "tipo": "dominio"
+    },
+    {
+      "nome": "consultar_dados_ocorrencia",
+      "descricao": "Consultar informações de uma ocorrência específica: resumo, localização, rota, acesso, riscos e status.",
+      "personas_autorizadas": [
+        "inspecao_trafego",
+        "guincho",
+        "aph",
+        "supervisor",
+        "gerente"
+      ],
+      "criticidade": "baixa",
+      "exige_confirmacao": false,
+      "dado_sensivel": false,
+      "user_stories": [
+        "P2-US1",
+        "P2-US3",
+        "P3-US4"
+      ],
+      "regra_de_desambiguacao": "A pergunta é sobre a OCORRÊNCIA (onde é, como chegar, que risco tem, como está). Se a pergunta é sobre os RECURSOS (quais viaturas, onde está o guincho), é consultar_recursos.",
+      "exemplos": [
+        "qual o melhor acesso pro km 204 sentido litoral",
+        "tem risco sinalizado no local"
+      ],
+      "tipo": "dominio"
+    },
+    {
+      "nome": "consultar_recursos",
+      "descricao": "Consultar recursos: os acionados numa ocorrência, sua localização, status, disponibilidade e utilização.",
+      "personas_autorizadas": [
+        "inspecao_trafego",
+        "aph",
+        "supervisor",
+        "gerente"
+      ],
+      "criticidade": "baixa",
+      "exige_confirmacao": false,
+      "dado_sensivel": false,
+      "user_stories": [
+        "P1-US4",
+        "P4-US3",
+        "P5-US6"
+      ],
+      "regra_de_desambiguacao": "O foco da pergunta é o recurso (guincho, viatura, ambulância), e não a ocorrência.",
+      "exemplos": [
+        "o guincho já foi acionado",
+        "onde estão os guinchos disponíveis"
+      ],
+      "tipo": "dominio"
+    },
+    {
+      "nome": "atualizar_status",
+      "descricao": "Atualizar a etapa do atendimento: missão recebida, a caminho, chegada, em atendimento, remoção, transporte, via liberada. Cada atualização marca o horário automaticamente.",
+      "personas_autorizadas": [
+        "inspecao_trafego",
+        "guincho",
+        "aph"
+      ],
+      "criticidade": "media",
+      "exige_confirmacao": true,
+      "dado_sensivel": false,
+      "user_stories": [
+        "P1-US5",
+        "P2-US2",
+        "P2-US4",
+        "P2-US7",
+        "P3-US3",
+        "P3-US6"
+      ],
+      "regra_de_desambiguacao": "Informa uma mudança de etapa sem encerrar. Se a frase encerra/finaliza a atividade como um todo, é encerrar_atendimento.",
+      "exemplos": [
+        "cheguei no local",
+        "missão recebida, tô saindo agora"
+      ],
+      "tipo": "dominio"
+    },
+    {
+      "nome": "solicitar_apoio",
+      "descricao": "Pedir apoio operacional, equipamento ou recurso adicional para o local.",
+      "personas_autorizadas": [
+        "inspecao_trafego",
+        "guincho",
+        "aph"
+      ],
+      "criticidade": "alta",
+      "exige_confirmacao": true,
+      "dado_sensivel": false,
+      "user_stories": [
+        "P1-US6",
+        "P2-US6",
+        "P3-US5"
+      ],
+      "regra_de_desambiguacao": "Pede algo que ainda não está no local. Mesma intenção nas três personas de campo; o que muda é a permissão sobre o tipo de recurso.",
+      "exemplos": [
+        "solicito uma UTI móvel no km 110",
+        "preciso de um guincho pesado"
+      ],
+      "tipo": "dominio"
+    },
+    {
+      "nome": "encerrar_atendimento",
+      "descricao": "Encerrar a atividade ou finalizar a missão, com relato das providências adotadas.",
+      "personas_autorizadas": [
+        "inspecao_trafego",
+        "guincho"
+      ],
+      "criticidade": "alta",
+      "exige_confirmacao": true,
+      "dado_sensivel": false,
+      "user_stories": [
+        "P1-US8",
+        "P2-US8"
+      ],
+      "regra_de_desambiguacao": "Verbos encerrar/finalizar sobre a atividade inteira. 'Via liberada' sozinho é atualizar_status.",
+      "exemplos": [
+        "encerra a ocorrência, veículo removido, pista liberada"
+      ],
+      "tipo": "dominio"
+    },
+    {
+      "nome": "gerar_resumo",
+      "descricao": "Gerar um resumo estruturado e editável para revisão e envio: resumo do atendimento, passagem de turno ou síntese gerencial de um período.",
+      "personas_autorizadas": [
+        "aph",
+        "supervisor",
+        "gerente"
+      ],
+      "criticidade": "media",
+      "exige_confirmacao": true,
+      "dado_sensivel": false,
+      "user_stories": [
+        "P3-US8",
+        "P4-US8",
+        "P5-US7"
+      ],
+      "regra_de_desambiguacao": "Pede um DOCUMENTO para revisar, guardar ou enviar. Se só quer saber como está a operação agora (resposta falada), é consultar_panorama.",
+      "exemplos": [
+        "gera a passagem de turno",
+        "gera a síntese gerencial da semana"
+      ],
+      "tipo": "dominio"
+    },
+    {
+      "nome": "consultar_panorama",
+      "descricao": "Ouvir um resumo da situação atual: ocorrências abertas, recursos e trechos críticos de um trecho ou da operação.",
+      "personas_autorizadas": [
+        "inspecao_trafego",
+        "supervisor",
+        "gerente"
+      ],
+      "criticidade": "baixa",
+      "exige_confirmacao": false,
+      "dado_sensivel": false,
+      "user_stories": [
+        "P1-US7",
+        "P4-US1",
+        "P5-US1"
+      ],
+      "regra_de_desambiguacao": "Visão geral do momento. Se filtra só críticas/atrasadas, é consultar_prioridades.",
+      "exemplos": [
+        "me passa um resumo das ocorrências abertas no meu trecho",
+        "como tá a operação agora"
+      ],
+      "tipo": "dominio"
+    },
+    {
+      "nome": "consultar_prioridades",
+      "descricao": "Consultar ocorrências por criticidade, tempo de espera, atraso ou eventos críticos em andamento.",
+      "personas_autorizadas": [
+        "supervisor",
+        "gerente"
+      ],
+      "criticidade": "baixa",
+      "exige_confirmacao": false,
+      "dado_sensivel": false,
+      "user_stories": [
+        "P4-US2",
+        "P4-US5",
+        "P5-US2"
+      ],
+      "regra_de_desambiguacao": "Filtro de urgência (críticas, fora do prazo, esperando há mais tempo). O alerta automático (push) da US P4-5 é gerado pelo sistema e fica fora da camada de NLU; a parte falada pelo usuário é esta consulta.",
+      "exemplos": [
+        "tem alguma ocorrência fora do prazo",
+        "quais eventos críticos estão em andamento"
+      ],
+      "tipo": "dominio"
+    },
+    {
+      "nome": "consultar_historico",
+      "descricao": "Consultar o histórico de uma ocorrência ou recurso: decisões e providências já registradas.",
+      "personas_autorizadas": [
+        "supervisor"
+      ],
+      "criticidade": "baixa",
+      "exige_confirmacao": false,
+      "dado_sensivel": false,
+      "user_stories": [
+        "P4-US6"
+      ],
+      "regra_de_desambiguacao": "Pede a linha do tempo/passado. 'Como está agora' é consultar_dados_ocorrencia.",
+      "exemplos": [
+        "me fala o histórico da ocorrência 347"
+      ],
+      "tipo": "dominio"
+    },
+    {
+      "nome": "consultar_indicadores",
+      "descricao": "Consultar indicadores: tempos, volumes, comparações de desempenho e recorrências por local, tipo ou causa.",
+      "personas_autorizadas": [
+        "supervisor",
+        "gerente"
+      ],
+      "criticidade": "baixa",
+      "exige_confirmacao": false,
+      "dado_sensivel": false,
+      "user_stories": [
+        "P4-US4",
+        "P5-US3",
+        "P5-US4"
+      ],
+      "regra_de_desambiguacao": "Pergunta analítica (média, comparação, recorrência, período).",
+      "exemplos": [
+        "qual o tempo médio de chegada do guincho hoje",
+        "quais trechos têm mais acidentes repetidos"
+      ],
+      "tipo": "dominio"
+    },
+    {
+      "nome": "consultar_pendencias",
+      "descricao": "Consultar registros incompletos, campos obrigatórios pendentes ou desvios de procedimento.",
+      "personas_autorizadas": [
+        "aph",
+        "supervisor",
+        "gerente"
+      ],
+      "criticidade": "baixa",
+      "exige_confirmacao": false,
+      "dado_sensivel": false,
+      "user_stories": [
+        "P3-US7",
+        "P5-US5"
+      ],
+      "regra_de_desambiguacao": "Pergunta o que está faltando ou fora do padrão. A aprovação de um registro é validar_registro.",
+      "exemplos": [
+        "falta preencher alguma coisa no relatório",
+        "quais registros estão incompletos"
+      ],
+      "tipo": "dominio"
+    },
+    {
+      "nome": "validar_registro",
+      "descricao": "Revisar e validar um registro sinalizado como incompleto ou inconsistente.",
+      "personas_autorizadas": [
+        "supervisor"
+      ],
+      "criticidade": "alta",
+      "exige_confirmacao": true,
+      "dado_sensivel": false,
+      "user_stories": [
+        "P4-US7"
+      ],
+      "regra_de_desambiguacao": "Ação de aprovar/validar um registro específico.",
+      "exemplos": [
+        "valida o registro da ocorrência 347"
+      ],
+      "tipo": "dominio"
+    },
+    {
+      "nome": "registrar_direcionamento",
+      "descricao": "Registrar uma decisão ou direcionamento operacional e encaminhar aos responsáveis, mediante validação.",
+      "personas_autorizadas": [
+        "gerente"
+      ],
+      "criticidade": "alta",
+      "exige_confirmacao": true,
+      "dado_sensivel": false,
+      "user_stories": [
+        "P5-US8"
+      ],
+      "regra_de_desambiguacao": "Uma ordem/decisão para a equipe, não um fato observado.",
+      "exemplos": [
+        "registra o direcionamento: reforçar a sinalização no km 87"
+      ],
+      "tipo": "dominio"
+    },
+    {
+      "nome": "confirmar",
+      "descricao": "Confirmar a ação que o agente repetiu (critério transversal 2).",
+      "personas_autorizadas": [
+        "inspecao_trafego",
+        "guincho",
+        "aph",
+        "supervisor",
+        "gerente"
+      ],
+      "criticidade": "baixa",
+      "exige_confirmacao": false,
+      "dado_sensivel": false,
+      "user_stories": [],
+      "regra_de_desambiguacao": "Intenção de diálogo, não vem de user story; existe para cumprir os critérios transversais 1 e 2.",
+      "exemplos": [
+        "sim, pode registrar"
+      ],
+      "tipo": "transversal"
+    },
+    {
+      "nome": "negar_corrigir",
+      "descricao": "Negar ou corrigir o dado que o agente repetiu.",
+      "personas_autorizadas": [
+        "inspecao_trafego",
+        "guincho",
+        "aph",
+        "supervisor",
+        "gerente"
+      ],
+      "criticidade": "baixa",
+      "exige_confirmacao": false,
+      "dado_sensivel": false,
+      "user_stories": [],
+      "regra_de_desambiguacao": "Intenção de diálogo, não vem de user story; existe para cumprir os critérios transversais 1 e 2.",
+      "exemplos": [
+        "não, o km tá errado, é 132"
+      ],
+      "tipo": "transversal"
+    },
+    {
+      "nome": "cancelar",
+      "descricao": "Desistir da ação em andamento.",
+      "personas_autorizadas": [
+        "inspecao_trafego",
+        "guincho",
+        "aph",
+        "supervisor",
+        "gerente"
+      ],
+      "criticidade": "baixa",
+      "exige_confirmacao": false,
+      "dado_sensivel": false,
+      "user_stories": [],
+      "regra_de_desambiguacao": "Intenção de diálogo, não vem de user story; existe para cumprir os critérios transversais 1 e 2.",
+      "exemplos": [
+        "cancela, não era isso"
+      ],
+      "tipo": "transversal"
+    },
+    {
+      "nome": "fora_de_escopo",
+      "descricao": "Pedido fora do domínio operacional; o agente deve dizer que não atende e pedir esclarecimento (critério transversal 1).",
+      "personas_autorizadas": [
+        "inspecao_trafego",
+        "guincho",
+        "aph",
+        "supervisor",
+        "gerente"
+      ],
+      "criticidade": "baixa",
+      "exige_confirmacao": false,
+      "dado_sensivel": false,
+      "user_stories": [],
+      "regra_de_desambiguacao": "Intenção de diálogo, não vem de user story; existe para cumprir os critérios transversais 1 e 2.",
+      "exemplos": [
+        "qual a previsão do tempo pra amanhã"
+      ],
+      "tipo": "transversal"
+    }
+  ],
+  "mapeamento_user_stories": [
+    {
+      "id": "P1-US1",
+      "persona": "inspecao_trafego",
+      "acao": "Registrar ocorrência",
+      "intencao": "registrar_ocorrencia"
+    },
+    {
+      "id": "P1-US2",
+      "persona": "inspecao_trafego",
+      "acao": "Consultar procedimento",
+      "intencao": "consultar_procedimento"
+    },
+    {
+      "id": "P1-US3",
+      "persona": "inspecao_trafego",
+      "acao": "Informar localização e condições",
+      "intencao": "relatar_condicoes"
+    },
+    {
+      "id": "P1-US4",
+      "persona": "inspecao_trafego",
+      "acao": "Consultar recursos acionados",
+      "intencao": "consultar_recursos"
+    },
+    {
+      "id": "P1-US5",
+      "persona": "inspecao_trafego",
+      "acao": "Atualizar status",
+      "intencao": "atualizar_status"
+    },
+    {
+      "id": "P1-US6",
+      "persona": "inspecao_trafego",
+      "acao": "Solicitar apoio",
+      "intencao": "solicitar_apoio"
+    },
+    {
+      "id": "P1-US7",
+      "persona": "inspecao_trafego",
+      "acao": "Ouvir resumo do trecho",
+      "intencao": "consultar_panorama"
+    },
+    {
+      "id": "P1-US8",
+      "persona": "inspecao_trafego",
+      "acao": "Encerrar atendimento",
+      "intencao": "encerrar_atendimento"
+    },
+    {
+      "id": "P2-US1",
+      "persona": "guincho",
+      "acao": "Receber resumo da missão",
+      "intencao": "consultar_dados_ocorrencia"
+    },
+    {
+      "id": "P2-US2",
+      "persona": "guincho",
+      "acao": "Confirmar recebimento",
+      "intencao": "atualizar_status"
+    },
+    {
+      "id": "P2-US3",
+      "persona": "guincho",
+      "acao": "Consultar rota e acesso",
+      "intencao": "consultar_dados_ocorrencia"
+    },
+    {
+      "id": "P2-US4",
+      "persona": "guincho",
+      "acao": "Registrar chegada",
+      "intencao": "atualizar_status"
+    },
+    {
+      "id": "P2-US5",
+      "persona": "guincho",
+      "acao": "Relatar condições",
+      "intencao": "relatar_condicoes"
+    },
+    {
+      "id": "P2-US6",
+      "persona": "guincho",
+      "acao": "Solicitar recurso adicional",
+      "intencao": "solicitar_apoio"
+    },
+    {
+      "id": "P2-US7",
+      "persona": "guincho",
+      "acao": "Atualizar etapas do serviço",
+      "intencao": "atualizar_status"
+    },
+    {
+      "id": "P2-US8",
+      "persona": "guincho",
+      "acao": "Finalizar missão",
+      "intencao": "encerrar_atendimento"
+    },
+    {
+      "id": "P3-US1",
+      "persona": "aph",
+      "acao": "Consultar protocolo aprovado",
+      "intencao": "consultar_procedimento"
+    },
+    {
+      "id": "P3-US2",
+      "persona": "aph",
+      "acao": "Registrar dados do atendimento",
+      "intencao": "registrar_dados_atendimento"
+    },
+    {
+      "id": "P3-US3",
+      "persona": "aph",
+      "acao": "Marcar horários relevantes",
+      "intencao": "atualizar_status"
+    },
+    {
+      "id": "P3-US4",
+      "persona": "aph",
+      "acao": "Consultar dados da ocorrência",
+      "intencao": "consultar_dados_ocorrencia"
+    },
+    {
+      "id": "P3-US5",
+      "persona": "aph",
+      "acao": "Solicitar apoio",
+      "intencao": "solicitar_apoio"
+    },
+    {
+      "id": "P3-US6",
+      "persona": "aph",
+      "acao": "Atualizar status operacional",
+      "intencao": "atualizar_status"
+    },
+    {
+      "id": "P3-US7",
+      "persona": "aph",
+      "acao": "Verificar campos pendentes",
+      "intencao": "consultar_pendencias"
+    },
+    {
+      "id": "P3-US8",
+      "persona": "aph",
+      "acao": "Gerar resumo para validação",
+      "intencao": "gerar_resumo"
+    },
+    {
+      "id": "P4-US1",
+      "persona": "supervisor",
+      "acao": "Consultar panorama operacional",
+      "intencao": "consultar_panorama"
+    },
+    {
+      "id": "P4-US2",
+      "persona": "supervisor",
+      "acao": "Priorizar atendimentos",
+      "intencao": "consultar_prioridades"
+    },
+    {
+      "id": "P4-US3",
+      "persona": "supervisor",
+      "acao": "Localizar recursos",
+      "intencao": "consultar_recursos"
+    },
+    {
+      "id": "P4-US4",
+      "persona": "supervisor",
+      "acao": "Acompanhar tempos",
+      "intencao": "consultar_indicadores"
+    },
+    {
+      "id": "P4-US5",
+      "persona": "supervisor",
+      "acao": "Receber alertas de exceção",
+      "intencao": "consultar_prioridades"
+    },
+    {
+      "id": "P4-US6",
+      "persona": "supervisor",
+      "acao": "Consultar histórico",
+      "intencao": "consultar_historico"
+    },
+    {
+      "id": "P4-US7",
+      "persona": "supervisor",
+      "acao": "Validar registros",
+      "intencao": "validar_registro"
+    },
+    {
+      "id": "P4-US8",
+      "persona": "supervisor",
+      "acao": "Gerar passagem de turno",
+      "intencao": "gerar_resumo"
+    },
+    {
+      "id": "P5-US1",
+      "persona": "gerente",
+      "acao": "Consultar resumo executivo",
+      "intencao": "consultar_panorama"
+    },
+    {
+      "id": "P5-US2",
+      "persona": "gerente",
+      "acao": "Acompanhar eventos críticos",
+      "intencao": "consultar_prioridades"
+    },
+    {
+      "id": "P5-US3",
+      "persona": "gerente",
+      "acao": "Comparar desempenho",
+      "intencao": "consultar_indicadores"
+    },
+    {
+      "id": "P5-US4",
+      "persona": "gerente",
+      "acao": "Identificar recorrências",
+      "intencao": "consultar_indicadores"
+    },
+    {
+      "id": "P5-US5",
+      "persona": "gerente",
+      "acao": "Monitorar conformidade",
+      "intencao": "consultar_pendencias"
+    },
+    {
+      "id": "P5-US6",
+      "persona": "gerente",
+      "acao": "Consultar disponibilidade",
+      "intencao": "consultar_recursos"
+    },
+    {
+      "id": "P5-US7",
+      "persona": "gerente",
+      "acao": "Gerar síntese gerencial",
+      "intencao": "gerar_resumo"
+    },
+    {
+      "id": "P5-US8",
+      "persona": "gerente",
+      "acao": "Registrar direcionamento",
+      "intencao": "registrar_direcionamento"
+    }
+  ],
+  "politica_fora_de_permissao": {
+    "regra": "As permissões seguem as user stories. Se a persona pede uma intenção que não está em personas_autorizadas, o agente reconhece a intenção, NÃO executa, informa que aquela função não pode fazer o pedido e oferece a alternativa permitida.",
+    "casos_no_corpus": {
+      "enu_0016": "supervisor pede recurso (solicitar_apoio): o agente não aciona; orienta que o pedido seja feito pela equipe de campo (inspeção, guincho ou APH).",
+      "enu_0028": "APH encerra o atendimento (encerrar_atendimento): o agente não encerra a ocorrência; oferece marcar a etapa do APH como concluída (atualizar_status)."
+    },
+    "implementacao": "Sprint 2 (agente). Na Sprint 1 a regra fica definida e os dois casos servem de teste."
+  }
+}

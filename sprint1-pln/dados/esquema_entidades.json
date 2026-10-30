@@ -1,0 +1,162 @@
+{
+  "versao": "0.2",
+  "convencao_span": "Posições [início, fim) em caracteres sobre o texto_normalizado (fim exclusivo, como em Python: texto[início:fim]).",
+  "tipos": [
+    {
+      "tipo": "tag_ocorrencia",
+      "descricao": "Número/identificador da ocorrência citado na fala.",
+      "formato_canonico": "string só com dígitos",
+      "exemplo_falado": "ocorrência três quatro sete",
+      "valor_canonico": "347",
+      "regra_normalizacao": "Dígitos falados um a um são concatenados; números compostos viram o número (trezentos e quarenta e sete → 347)."
+    },
+    {
+      "tipo": "km",
+      "descricao": "Marco quilométrico da rodovia.",
+      "formato_canonico": "número decimal (float)",
+      "exemplo_falado": "km cento e vinte e três e meio",
+      "valor_canonico": 123.5,
+      "regra_normalizacao": "Número por extenso → dígitos; 'e meio' soma 0.5; 'mais N' (metros) soma N/1000 (km 51 mais 300 → 51.3); vírgula decimal vira ponto; quilômetro/kilometro/KM → km."
+    },
+    {
+      "tipo": "sentido",
+      "descricao": "Sentido de tráfego da via.",
+      "formato_canonico": "enum",
+      "valores": [
+        "capital",
+        "interior",
+        "litoral",
+        "norte",
+        "sul",
+        "leste",
+        "oeste",
+        "crescente",
+        "decrescente"
+      ],
+      "exemplo_falado": "sentido capital",
+      "valor_canonico": "capital",
+      "regra_normalizacao": "Remove a palavra 'sentido'/'pista'; variantes pelo glossário."
+    },
+    {
+      "tipo": "faixa",
+      "descricao": "Faixa ou posição transversal na via.",
+      "formato_canonico": "enum",
+      "valores": [
+        "faixa_1",
+        "faixa_2",
+        "faixa_3",
+        "faixa_4",
+        "faixa_esquerda",
+        "faixa_central",
+        "faixa_direita",
+        "acostamento",
+        "canteiro_central"
+      ],
+      "exemplo_falado": "faixa dois",
+      "valor_canonico": "faixa_2",
+      "regra_normalizacao": "faixa + número → faixa_N; 'da direita'/'da esquerda' → faixa_direita/faixa_esquerda."
+    },
+    {
+      "tipo": "tipo_ocorrencia",
+      "descricao": "Natureza do evento.",
+      "formato_canonico": "enum",
+      "valores": [
+        "acidente",
+        "atropelamento",
+        "pane_mecanica",
+        "veiculo_parado",
+        "animal_na_pista",
+        "objeto_na_pista",
+        "oleo_na_pista",
+        "queda_de_carga",
+        "incendio_veiculo",
+        "vitima_presa"
+      ],
+      "exemplo_falado": "sinistro com dois carros",
+      "valor_canonico": "acidente",
+      "regra_normalizacao": "Sinônimos pelo glossário (sinistro, batida, colisão → acidente)."
+    },
+    {
+      "tipo": "recurso",
+      "descricao": "Recurso operacional citado ou solicitado.",
+      "formato_canonico": "enum",
+      "valores": [
+        "guincho_leve",
+        "guincho_pesado",
+        "guincho",
+        "ambulancia",
+        "uti_movel",
+        "viatura_inspecao",
+        "viatura_sinalizacao",
+        "equipe_aph",
+        "policia",
+        "bombeiros"
+      ],
+      "exemplo_falado": "uma UTI móvel",
+      "valor_canonico": "uti_movel",
+      "regra_normalizacao": "Pelo glossário; 'guincho' sem porte → guincho."
+    },
+    {
+      "tipo": "status",
+      "descricao": "Etapa do atendimento.",
+      "formato_canonico": "enum",
+      "valores": [
+        "missao_recebida",
+        "a_caminho",
+        "no_local",
+        "em_atendimento",
+        "remocao_iniciada",
+        "em_transporte",
+        "via_liberada",
+        "encerrada"
+      ],
+      "exemplo_falado": "cheguei no local",
+      "valor_canonico": "no_local",
+      "regra_normalizacao": "Expressões do glossário → valor do enum."
+    },
+    {
+      "tipo": "horario",
+      "descricao": "Horário citado na fala.",
+      "formato_canonico": "HH:MM (24h)",
+      "exemplo_falado": "às quinze e quarenta",
+      "valor_canonico": "15:40",
+      "regra_normalizacao": "'às H e M', 'H horas', 'HhM' → HH:MM."
+    },
+    {
+      "tipo": "condicao_observada",
+      "descricao": "Condição da via, do ambiente, do veículo ou da carga.",
+      "formato_canonico": "enum",
+      "valores": [
+        "pista_molhada",
+        "chuva",
+        "neblina",
+        "baixa_visibilidade",
+        "pista_bloqueada",
+        "faixa_interditada",
+        "vazamento_combustivel",
+        "carga_espalhada",
+        "fumaca",
+        "congestionamento"
+      ],
+      "exemplo_falado": "neblina forte",
+      "valor_canonico": "neblina",
+      "regra_normalizacao": "Pelo glossário. Óleo na pista é tipo_ocorrencia, não condição (evita dupla anotação)."
+    },
+    {
+      "tipo": "trecho",
+      "descricao": "Trecho ou região da operação citado em consultas de supervisor/gerente.",
+      "formato_canonico": "string em snake_case",
+      "exemplo_falado": "no trecho norte",
+      "valor_canonico": "norte",
+      "regra_normalizacao": "Remove 'trecho'/'região'; nome em minúsculas e snake_case (trecho norte → norte; região central → central)."
+    },
+    {
+      "tipo": "periodo",
+      "descricao": "Período de tempo de uma consulta analítica ou de um relatório.",
+      "formato_canonico": "string em snake_case",
+      "exemplo_falado": "nos últimos trinta dias",
+      "valor_canonico": "ultimos_30_dias",
+      "regra_normalizacao": "hoje → hoje; essa/esta semana → semana_atual; deste/desse mês → mes_atual; mês passado → mes_anterior; últimos N dias → ultimos_N_dias; nome do mês → o mês (outubro); no meu turno → turno_atual."
+    }
+  ]
+}
